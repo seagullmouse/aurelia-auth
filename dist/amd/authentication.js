@@ -147,6 +147,9 @@ define(['exports', 'aurelia-dependency-injection', './base-config', './storage',
 
       if (exp) {
         return Math.round(new Date().getTime() / 1000) <= exp;
+      } else {
+        this.logout();
+        return false;
       }
 
       return true;
